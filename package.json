@@ -1,0 +1,13 @@
+{
+ "name": "REST",
+ "version": "1.0.0",
+ "description": "API REST para consulta de datos",
+ "main": "server.js",
+ "dependencies": {
+  "body-parser": "^1.18.2",
+  "express": "^4.7.1"
+ },
+ "author": "Sebastian Vega",
+ "license": "ISC",
+ "private": true
+}

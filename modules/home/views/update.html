@@ -1,0 +1,32 @@
+<div class="containerNew" ng-hide="vm.hideUpdate">
+<form class="form-horizontal" name="form" id="form" ng-submit="vm.update()" role="form">
+	<div class="form-group">
+		<label for="id">Id:</label>
+		<input type="number" name="id" class="form-control col-sm-1" ng-model="vm.id" autofocus required />
+		<span ng-show="form.id.$dirty && form.id.$error.required" class="help-block text-danger">Debe ingresar un id!</span>
+	</div>
+	<div class="form-group">
+		<label for="fecha">Fecha:</label>
+		<input type="text" name="fecha" class="form-control" placeholder="Ingrese la fecha" ng-model="vm.fecha" autofocus required />
+		<span ng-show="form.fecha.$dirty && form.fecha.$error.required" class="help-block text-danger">Debe ingresar una fecha!</span>
+	</div>
+	<div class="form-group">
+		<label for="folio">Folio:</label>
+		<input type="text" name="folio" class="form-control" placeholder="Ingrese el folio" ng-model="vm.folio" autofocus required />
+		<span ng-show="form.folio.$dirty && form.folio.$error.required" class="help-block text-danger">Debe ingresar un folio!</span>
+	</div>
+	<div class="form-group">
+		<label for="nombre">Nombre Comprador:</label>
+		<input type="text" name="nombre" class="form-control" placeholder="Ingrese el nombre del comprador" ng-model="vm.nombre" autofocus required />
+		<span ng-show="form.nombre.$dirty && form.nombre.$error.required" class="help-block text-danger">Debe ingresar un nombre!</span>
+	</div>
+	<div class="form-group">
+		<label for="monto">Monto:</label>
+		<input type="number" name="monto" class="form-control col-sm-2" ng-model="vm.monto" autofocus required/>
+		<span ng-show="form.monto.$dirty && form.monto.$error.required" class="help-block text-danger">Debe ingresar un monto!</span>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-success" ng-disabled="empList.$invalid">Ingresar</button>
+	</div>
+</form>
+</div>

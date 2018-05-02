@@ -1,0 +1,11 @@
+<h2 class="section-title page-header">{{vm.title}}</h2>
+<div class="container" >
+	<button type="button" class="btn btn-sm btn-success" href="pages/empresa/empresa.new.html" ng-click="vm.btnNew()" ng-hide="vm.hideButton">Nuevo documento</button>
+		
+	<hr />
+
+	<div ng-include="'modules/home/views/tabla.html'"></div>
+	<div ng-include="'modules/home/views/new.html'"></div>
+	<div ng-include="'modules/home/views/update.html'"></div>
+</div>
+<div ng-include="'modules/home/views/view.html'"></div>

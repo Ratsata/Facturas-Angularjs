@@ -1,0 +1,28 @@
+<div class="containerView" ng-hide="vm.hideView">
+<h4 class="section-title page-header">Datos de la factura</h4>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Unidad</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="detalle in vm.details" ng-init="x = $index">
+          <td>#{{detalle.documento_detalle_id}}</td>
+          <td>{{detalle.unidad_medida}}</td>
+          <td>{{detalle.precio}}</td>
+          <td>{{detalle.cantidad}}</td>
+          <td>${{detalle.subtotal}}</td>
+          <td>{{detalle.descripcion}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

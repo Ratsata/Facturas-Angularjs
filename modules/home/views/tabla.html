@@ -1,0 +1,31 @@
+<div class="table-responsive" ng-hide="vm.hideTable">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Fecha</th>
+					<th>Folio</th>
+					<th>Nombre</th>
+					<th>Total</th>
+					<th>Acción</th>
+				</tr>
+			</thead>
+
+
+			<tbody id="table_empresas">
+				<tr ng-repeat="elementos in vm.records" ng-init="x = $index">
+					<td>#{{elementos.documento_id}}</td>
+					<td>{{elementos.fecha}}</td>
+					<td>{{elementos.folio}}</td>
+					<td>{{elementos.nombre_comprador}}</td>
+					<td>${{elementos.total}}</td>
+					<td>
+
+						<button type="button" ng-click="vm.view(elementos)" class="btn btn-success" data-toggle="modal" data-target="#viewModal"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Visualizar</button>
+                        <button type="button" ng-click="vm.btnUpdate(elementos)" class="btn btn-info"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Modificar</button>
+                        <button type="button" ng-click="vm.delete(elementos)" class="btn btn-danger btneliminarVerificado"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Eliminar</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div>
